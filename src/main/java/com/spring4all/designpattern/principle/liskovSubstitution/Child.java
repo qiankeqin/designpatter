@@ -23,7 +23,7 @@ public class Child extends Base{
      * 重载
      * @param map
      */
-    public void method(HashMap map) {
+    public void method(Map map) {
         System.out.println("子类Map入参被执行");
     }
 

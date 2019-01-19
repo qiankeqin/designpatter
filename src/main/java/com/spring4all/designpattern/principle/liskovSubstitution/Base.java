@@ -10,7 +10,7 @@ import java.util.Map;
  * @create: 2019-01-19 20:23
  **/
 public class Base {
-    public void method(Map map){
+    public void method(HashMap map){
         System.out.println("父类被执行");
     }
 }
