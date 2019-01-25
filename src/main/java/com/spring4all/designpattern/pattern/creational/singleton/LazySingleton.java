@@ -8,9 +8,13 @@ package com.spring4all.designpattern.pattern.creational.singleton;
 public class LazySingleton {
 
     private static LazySingleton lazySingleton = null;
-
+    private static Boolean flag = true;
     private LazySingleton(){
-
+        if (flag){
+            flag = false;
+        } else {
+            throw new RuntimeException("单例模式，禁止反射调用！！！");
+        }
     }
 
     public synchronized static LazySingleton getInstance(){
