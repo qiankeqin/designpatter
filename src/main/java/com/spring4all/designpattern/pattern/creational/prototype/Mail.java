@@ -5,7 +5,7 @@ package com.spring4all.designpattern.pattern.creational.prototype;
  * @Description: DESCRIPTION
  * @date 2019-02-01 13:27
  */
-public class Mail {
+public class Mail implements Cloneable{
     private String name;
     private String emailAddress;
     private String content;
@@ -44,6 +44,12 @@ public class Mail {
                 "name='" + name + '\'' +
                 ", emailAddress='" + emailAddress + '\'' +
                 ", content='" + content + '\'' +
-                '}';
+                '}'+ super.toString();
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        System.out.println("调用Mail clone");
+        return super.clone();
     }
 }
