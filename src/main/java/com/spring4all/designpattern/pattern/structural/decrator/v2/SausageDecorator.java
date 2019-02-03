@@ -12,7 +12,7 @@ public class SausageDecorator extends AbstractDecorator{
 
     @Override
     protected void doSomething() {
-
+        //doSomething
     }
 
     @Override
