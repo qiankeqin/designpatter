@@ -11,7 +11,11 @@ import java.util.List;
 public class Stack {
     private List<Command> commandList = new ArrayList<>();
 
-    private void executeCommand(){
+    public void addCommand(Command command){
+        commandList.add(command);
+    }
+
+    public void executeCommand(){
         for (Command command : commandList) {
             command.execute();
         }
